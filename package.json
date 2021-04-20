@@ -1,0 +1,27 @@
+{
+  "name": "@guilhermetod/lintr",
+  "version": "0.0.0",
+  "description": "A Lintr2 runner optimized for running your linters",
+  "keywords": [
+    "Check",
+    "ESLint",
+    "Hooks",
+    "Lint",
+    "Linters",
+    "Listr",
+    "Listr2"
+  ],
+  "homepage": "https://github.com/guilhermetod/lintr#readme",
+  "bugs": {
+    "url": "https://github.com/guilhermetod/lintr/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermetod/lintr.git"
+  },
+  "license": "ISC",
+  "author": "Guilherme Tod <guilhermetod@gmail.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
