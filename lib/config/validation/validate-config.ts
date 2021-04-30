@@ -34,7 +34,7 @@ const validateLinterSpecification = (config: Required<RuntimeConfig>): void | ne
 
   const validLinterNames = linters.map((linter) => normalizeLinterName(linter.name));
   const specifiedLinterNames = [...disable, ...enable].map(normalizeLinterName);
-  const invalidLinterNames = specifiedLinterNames.filter((linterName) => !validLinterNames.includes(linterName));
+  const invalidLinterNames = getForbiddenValues(specifiedLinterNames, validLinterNames);
 
   if (invalidLinterNames.length > 0) {
     exitWithError(`invalid specified ${buildListString(invalidLinterNames, 'linter')}`);
