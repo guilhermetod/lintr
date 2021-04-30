@@ -53,7 +53,7 @@ const validateTargetOptions = (config: Required<RuntimeConfig>): void | never =>
   }
 };
 
-export const validateConfig = async (config: Required<RuntimeConfig>): Promise<void | never> => {
+export const validateConfig = (config: Required<RuntimeConfig>): void | never => {
   validateLinters(config);
   validateLinterSpecification(config);
   validateTargetOptions(config);

@@ -29,7 +29,7 @@ const buildListr = (config: Required<RuntimeConfig>): Listr => new Listr(
 export const lint = async (config: RuntimeConfig): Promise<void> => {
   const normalizedConfig = { ...defaultRuntimeConfig, ...config };
 
-  await validateConfig(normalizedConfig);
+  validateConfig(normalizedConfig);
 
   const listr = buildListr(normalizedConfig);
 
