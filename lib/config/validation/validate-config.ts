@@ -1,8 +1,8 @@
 import { acceptedGlobbyOptions } from '@lib/config/validation/accepted-globby-options';
 import { RuntimeConfig } from '@lib/typings/runtime-config';
 import { buildListString } from '@lib/utils/build-list-string';
-import { getForbiddenValues } from '@lib/utils/contains-forbidden-value';
 import { exitWithError } from '@lib/utils/exit-with-error';
+import { getForbiddenValues } from '@lib/utils/get-forbidden-value';
 import { getLintersByName } from '@lib/utils/get-linters-by-name';
 import { normalizeLinterName } from '@lib/utils/normalize-linter-name';
 
