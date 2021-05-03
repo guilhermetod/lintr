@@ -1,6 +1,4 @@
-import { GlobbyOptions } from 'globby';
-
-export const acceptedGlobbyOptions: ReadonlyArray<keyof GlobbyOptions> = [
+export const acceptedGlobbyOptions = [
   'absolute',
   'baseNameMatch',
   'braceExpansion',
@@ -16,4 +14,4 @@ export const acceptedGlobbyOptions: ReadonlyArray<keyof GlobbyOptions> = [
   'onlyDirectories',
   'onlyFiles',
   'unique',
-];
+] as const;

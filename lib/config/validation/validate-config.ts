@@ -43,7 +43,7 @@ const validateLinterSpecification = (config: Required<RuntimeConfig>): void | ne
 
 const validateTargetOptions = (config: Required<RuntimeConfig>): void | never => {
   const targetOptionsKeys = Object.keys(config.targetOptions);
-  const forbiddenKeys = getForbiddenValues(targetOptionsKeys, acceptedGlobbyOptions as string[]);
+  const forbiddenKeys = getForbiddenValues(targetOptionsKeys, acceptedGlobbyOptions);
 
   if (forbiddenKeys.length) {
     exitWithError(`invalid targetOptions ${buildListString(forbiddenKeys, 'key')}`);
