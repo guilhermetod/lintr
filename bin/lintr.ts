@@ -13,7 +13,7 @@ const args = yargs
   .usage('lintr [targets] [options]')
   .options(cliOptions)
   .wrap(width)
-  .strict()
+  .strictOptions()
   .argv as yargs.Arguments<CLIConfig>;
 
 const targets = args._.map((n) => n.toString());
