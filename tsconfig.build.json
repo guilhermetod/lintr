@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@bin/*": [
+        "./bin/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ]
+    },
+    "target": "ES5"
+  },
+  "files": [
+    "./bin/lintr.ts",
+    "./lib/index.ts"
+  ],
+  "include": [
+    "./lib/**/*.d.ts"
+  ],
+  "exclude": [
+    "./**/*.test.ts"
+  ]
+}

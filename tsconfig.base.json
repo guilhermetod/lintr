@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "declaration": true,
+    "declarationDir": "./dist/typings",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ESNext"
+    ],
+    "importHelpers": true,
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "noEmit": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "@bin/*": [
+        "bin/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@tests/*": [
+        "tests/*"
+      ]
+    },
+    "outDir": "./dist/",
+    "removeComments": true,
+    "strict": true,
+    "target": "ES2019",
+    "types": [
+      "node"
+    ]
+  }
+}

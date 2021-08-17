@@ -1,0 +1,17 @@
+export const acceptedGlobbyOptions = [
+  'absolute',
+  'baseNameMatch',
+  'braceExpansion',
+  'caseSensitiveMatch',
+  'cwd',
+  'deep',
+  'dot',
+  'extglob',
+  'followSymbolicLinks',
+  'gitignore',
+  'globstar',
+  'markDirectories',
+  'onlyDirectories',
+  'onlyFiles',
+  'unique',
+] as const;

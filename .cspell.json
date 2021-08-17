@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
+  "ignorePaths": [
+    "./dist/",
+    "./node_modules/",
+    "./tests/reports/",
+    "./**/!(*.js|*.md|*.ts)"
+  ],
+  "language": "en",
+  "words": [
+    // Project
+    "lintr",
+    // Packages
+    "cosmiconfig",
+    "globby",
+    "listr",
+    // Misc
+    "extglob",
+    "globbed",
+    "globstar"
+  ]
+}
