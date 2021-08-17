@@ -1,7 +1,6 @@
 import { exec } from 'child_process';
 
 import { ListrRenderer, ListrTask, ListrTaskWrapper } from 'listr2';
-import { Observable, Observer } from 'rxjs';
 
 import { getGlobalTargets } from '@lib/core/get-global-targets';
 import { getLinterTargets } from '@lib/core/get-linter-targets';
@@ -42,30 +41,32 @@ const buildCommandLine = (config: TaskConfig): string => {
   return `${command} ${fixArgument} ${targetsArgument}`;
 };
 
-const reportAndRunCommandLine = (config: TaskConfig, observer: Observer<string | void>): void => {
-  observer.next(buildTaskReportOutput(config));
+const reportAndRunCommandLine = async (
+  task: ListrTaskWrapper<null, typeof ListrRenderer>,
+  config: TaskConfig,
+): Promise<void> => {
+  task.stdout().write(buildTaskReportOutput(config));
 
-  exec(buildCommandLine(config), (err, stdout, stderr) => (
-    err
-      ? observer.error(new Error(`${stdout}\n${stderr}`))
-      : observer.complete()
-  ));
+  return new Promise((resolve, reject) => {
+    exec(buildCommandLine(config), (err, stdout, stderr) => (
+      err
+        ? reject(new Error(`${stdout}\n${stderr}`))
+        : resolve()
+    ));
+  });
 };
 
 const completeTaskWithNoTarget = (
   task: ListrTaskWrapper<null, typeof ListrRenderer>,
-  observer: Observer<string | void>,
   taskConfig: TaskConfig,
 ): void => {
   const message = 'No targets matched for this linter';
 
   if (taskConfig.errorOnEmptyTarget) {
-    observer.error(new Error(message));
+    throw new Error(message);
   } else {
     task.skip(message);
   }
-
-  observer.complete();
 };
 
 export const buildTasks = (runtimeConfig: Required<RuntimeConfig>): ListrTask[] => {
@@ -80,13 +81,13 @@ export const buildTasks = (runtimeConfig: Required<RuntimeConfig>): ListrTask[] 
 
     return {
       title,
-      task: (ctx, task): Observable<string | void> => new Observable((observer) => {
+      task: async (ctx, task): Promise<void> => {
         if (hasTarget(taskConfig)) {
-          reportAndRunCommandLine(taskConfig, observer);
+          await reportAndRunCommandLine(task, taskConfig);
         } else {
-          completeTaskWithNoTarget(task, observer, taskConfig);
+          completeTaskWithNoTarget(task, taskConfig);
         }
-      }),
+      },
     };
   });
 };
