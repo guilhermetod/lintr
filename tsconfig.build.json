@@ -8,8 +8,7 @@
       "@lib/*": [
         "./lib/*"
       ]
-    },
-    "target": "ES5"
+    }
   },
   "files": [
     "./bin/lintr.ts",
