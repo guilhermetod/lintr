@@ -11,6 +11,7 @@
     // Project
     "lintr",
     // Packages
+    "commitlint",
     "cosmiconfig",
     "globby",
     "listr",
