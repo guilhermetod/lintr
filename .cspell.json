@@ -12,6 +12,7 @@
     "lintr",
     // Packages
     "commitlint",
+    "conventionalcommits",
     "cosmiconfig",
     "globby",
     "listr",
