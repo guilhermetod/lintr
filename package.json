@@ -60,7 +60,6 @@
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-jest": "^24.4.0",
     "jest": "^27.0.6",
-    "jest-html-reporter": "^3.4.1",
     "rollup": "^2.56.2",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
