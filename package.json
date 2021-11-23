@@ -62,6 +62,7 @@
     "jest": "^27.3.1",
     "rollup": "^2.60.1",
     "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
