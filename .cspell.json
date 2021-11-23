@@ -15,6 +15,7 @@
     "conventionalcommits",
     "cosmiconfig",
     "globby",
+    "guilhermetod",
     "listr",
     // Misc
     "extglob",
