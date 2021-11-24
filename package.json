@@ -1,6 +1,6 @@
 {
   "name": "@guilhermetod/lintr",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "A Lintr2 runner optimized for running your linters",
   "keywords": [
     "Check",
