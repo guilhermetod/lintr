@@ -11,8 +11,11 @@
     // Project
     "lintr",
     // Packages
+    "commitlint",
+    "conventionalcommits",
     "cosmiconfig",
     "globby",
+    "guilhermetod",
     "listr",
     // Misc
     "extglob",
