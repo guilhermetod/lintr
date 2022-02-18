@@ -8,5 +8,6 @@ export const icons = {
   prettier: chalk.hsl(24, 90, 63)(''),
   sass: chalk.hsl(330, 50, 50)(''),
   stylelint: chalk.white(''),
+  translation: chalk.blue('🌐'),
   typescript: chalk.hsl(201, 98, 41)(''),
 };
